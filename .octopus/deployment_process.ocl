@@ -15,19 +15,15 @@ step "run-a-script" {
 
 step "run-a-script-git-sourced" {
     name = "Run a Script - Git sourced"
-    properties = {
-        Octopus.Action.TargetRoles = "test"
-    }
 
     action {
         action_type = "Octopus.Script"
         properties = {
             Octopus.Action.GitRepository.Source = "Project"
-            Octopus.Action.RunOnServer = "false"
+            Octopus.Action.RunOnServer = "true"
             Octopus.Action.Script.ScriptFileName = "script.sh"
             Octopus.Action.Script.ScriptSource = "GitRepository"
             OctopusUseBundledTooling = "False"
         }
-        worker_pool_variable = ""
     }
 }
