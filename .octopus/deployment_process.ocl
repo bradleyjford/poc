@@ -11,6 +11,7 @@ step "run-a-script" {
             OctopusUseBundledTooling = "False"
         }
     }
+    worker_pool = "hosted-ubuntu"
 }
 
 step "run-a-script-git-sourced" {
@@ -26,4 +27,6 @@ step "run-a-script-git-sourced" {
             OctopusUseBundledTooling = "False"
         }
     }
+
+    worker_pool = "hosted-ubuntu"
 }
